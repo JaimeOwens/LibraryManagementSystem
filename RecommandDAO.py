@@ -1,6 +1,6 @@
 from DBPool import Mysql
 
-class Recommand(object):
+class RecommandDAO(object):
 
     # 插入一条推荐记录，插入成功返回1
     def InsertRecommandRecord(self, List):
@@ -44,7 +44,7 @@ class Recommand(object):
         mysql.dispose()
 
 
-#test = Recommand()
+#test = RecommandDAO()
 #list = [('11000', '高数p', '无名', '北京林业大学出版社', '最牛版', '太好看')]
 #test.InsertRecommandRecord(list)
 #test.GetRecommandRecord({'userid': '11000'})
