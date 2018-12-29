@@ -2,9 +2,6 @@ import pymysql as db
 from DBUtils.PooledDB import PooledDB
 from pymysql.cursors import DictCursor
 
-"""
-Config是一些数据库的配置文件
-"""
 
 class Mysql(object):
     """

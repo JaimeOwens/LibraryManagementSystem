@@ -4,11 +4,11 @@ class BookAPI(object):
     # 获取任何表中的所有记录
     def GetAllBookRecord(self,num):
         mysql = Mysql()
-        str = input("input the table name:")
-        sqlAll= "select * from " + str + " limit " + num
-        print(sqlAll)
+        if(str(num) == '0'):
+            sqlAll = "select * from book"
+        else:
+            sqlAll= "select * from book limit " + str(num)
         result = mysql.getAll(sqlAll)
-        print(type(result))
         print("bookid\tbookname\tauthor\tpages\tcollecttime\tversion\tmajor\tdiscipline\tisbn\tbooklanguage\tpublisher\tstatus\tabstract\tstack\tshelf\tfloor\tbookvalue")
         if result :
             for row in result :
@@ -117,7 +117,6 @@ class BookAPI(object):
     def UpdateRecord(self,table,key1,val1,key2,val2):#key1和val1是修改键和值，val1和val2是条件键和值，如果是val是非数字，则需要写成'"数"'传入
         mysql = Mysql()
         sql = "update " + table + " set " + key1 + "='" + val1 + "' where " + key2 + "='" + val2 + "'"
-        print(sql)
         try:
             mysql.update(sql,None)
             # mysql.update("update book")
