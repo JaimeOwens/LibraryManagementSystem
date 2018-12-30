@@ -1,0 +1,5 @@
+list1=('123', '489', 'str')
+print(list1, type(list1))
+list2=input()
+list2=list2.split()
+print(list2,type(list2))
