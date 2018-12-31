@@ -1,33 +1,34 @@
-from DBPool import Mysql
-from MiddleBook import MiddleBook
-from ShowObj import ShowObj
+from SQLFactories import Mysql
+from Book import Book
+from MiddleLayer import MiddleLayer
 
 
 class BookAPI(object):
     # 获取任何表中的所有记录,返回对象的元组
-    def GetAllBookRecord(self,num):
+    def GetAllBookRecord(self, num=0):
         mysql = Mysql()
-        if(str(num) == '0'):
+        if (str(num) == '0'):
             sqlAll = "select * from book"
         else:
-            sqlAll= "select * from book limit " + str(num)
+            sqlAll = "select * from book limit " + str(num)
         result = mysql.getAll(sqlAll)
         # print("bookid\tbookname\tauthor\tpages\tcollecttime\tversion\tmajor\tdiscipline\tisbn\tbooklanguage\tpublisher\tstatus\tabstract\tstack\tshelf\tfloor\tbookvalue")
         # if result :
         #     for row in result :
-                # print("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s" %(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10],row[11],row[12],row[13],row[14],row[15],row[16]))
+        # print("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s" %(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10],row[11],row[12],row[13],row[14],row[15],row[16]))
         mysql.dispose()
         if result == False:
             print('no record')
             return 0
-        show = ShowObj()
+        show = MiddleLayer()
         tums = show.ShowBook(result)
         return tums
-    #按分类查找图书
-    #按discipline字段分类
-    def GetBookByDis(self,desci):
+
+    # 按分类查找图书
+    # 按discipline字段分类
+    def GetBookByDis(self, desci):
         mysql = Mysql()
-        Dis_List = mysql.getAll("select * from book where discipline = '" + desci +"'")
+        Dis_List = mysql.getAll("select * from book where discipline = '" + desci + "'")
         # print("Classification of " + desci + ":\n")
         # print("bookid\tbookname\tauthor\tpages\tcollecttime\tversion\tmajor\tdiscipline\tisbn\tbooklanguage\tpublisher\tstatus\tabstract\tstack\tshelf\tfloor\tbookvalue")
         # if Dis_List:
@@ -37,13 +38,14 @@ class BookAPI(object):
         if Dis_List == False:
             print('no record')
             return 0
-        show = ShowObj()
+        show = MiddleLayer()
         tums = show.ShowBook(Dis_List)
         return tums
-    #按major字段分类
-    def GetBookByMaj(self,maj):
+
+    # 按major字段分类
+    def GetBookByMaj(self, maj):
         mysql = Mysql()
-        Maj_List = mysql.getAll("select * from book where major = '" + maj +"'")
+        Maj_List = mysql.getAll("select * from book where major = '" + maj + "'")
         # #Dis_List = Dis_List.decode('utf-8')
         # print(Maj_List)
         # print("Classification of " + maj + ":\n")
@@ -55,12 +57,24 @@ class BookAPI(object):
         if Maj_List == False:
             print('no record')
             return 0
-        show = ShowObj()
+        show = MiddleLayer()
         tums = show.ShowBook(Maj_List)
         return tums
-    #按字段查询
-    #返回查询到的书籍数量
-    def GetBookByField(self,obj):
+
+    def GetBookByName(self, keyword):
+        mysql = Mysql()
+        book_list = mysql.getAll("select * from book where bookname like '%" + keyword + "%'")
+        mysql.dispose()
+        if book_list == False:
+            print('no record')
+            return 0
+        show = MiddleLayer()
+        tums = show.ShowBook(book_list)
+        return tums
+
+    # 按字段查询
+    # 返回查询到的书籍数量
+    def GetBookByField(self, obj):
         # 拼接成Dict函数
         # 例：{'bookid': '100014', 'author': '韩强军'}
         Seq = []
@@ -106,7 +120,7 @@ class BookAPI(object):
             Val.append(obj.get_abstract())
         if obj.get_stack() != '':
             Seq.append('stack')
-            Val.append(obj.set_stack())
+            Val.append(obj.get_stack())
         if obj.get_shelf() != '':
             Seq.append('shelf')
             Val.append(obj.get_shelf())
@@ -117,7 +131,7 @@ class BookAPI(object):
             Seq.append('bookvalue')
             Val.append(obj.get_bookvalue())
 
-        Dict = dict(zip(Seq,Val))
+        Dict = dict(zip(Seq, Val))
 
         mysql = Mysql()
         sql = "select * from book where "
@@ -125,7 +139,7 @@ class BookAPI(object):
         vals = tuple(Dict.values())
         Len = len(Dict)
         for i in range(Len):
-            if (i != Len-1):
+            if (i != Len - 1):
                 sql = sql + keys[i] + "='" + str(vals[i]) + "' and "
             else:
                 sql = sql + keys[i] + "='" + str(vals[i]) + "'"
@@ -144,13 +158,17 @@ class BookAPI(object):
         #                   (row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],\
         #                  row[9],row[10],row[11],row[12],row[13],row[14],row[15],row[16]))
         mysql.dispose()
-        show = ShowObj()
+        show = MiddleLayer()
         tums = show.ShowBook(Book)
         return tums
-    #插入图书记录，列表传入
-    def InsertBookRecord(self,obj):
-        #obj->list
-        List = [obj.get_bookid(),obj.get_bookname(),obj.get_author(),obj.get_pages(),obj.get_collecttime(),obj.get_version(),obj.get_major(),obj.get_discipline(),obj.get_isbn(),obj.get_booklanguage(),obj.get_publisher(),obj.get_status(),obj.get_abstract(),obj.get_stack(),obj.get_shelf(),obj.get_floor(),obj.get_bookvalue()]
+
+    # 插入图书记录，列表传入
+    def InsertBookRecord(self, obj):
+        # obj->list
+        List = [obj.get_bookid(), obj.get_bookname(), obj.get_author(), obj.get_pages(), obj.get_collecttime(),
+                obj.get_version(), obj.get_major(), obj.get_discipline(), obj.get_isbn(), obj.get_booklanguage(),
+                obj.get_publisher(), obj.get_status(), obj.get_abstract(), obj.get_stack(), obj.get_shelf(),
+                obj.get_floor(), obj.get_bookvalue()]
         Tum = tuple(List)
         List = []
         List.append(Tum)
@@ -170,24 +188,26 @@ class BookAPI(object):
             print('error')
             mysql.end(None)
         mysql.dispose()
-    #输入表名、字段和条件，删除一条记录(通用)
-    def DeleteRecord(self,table,key,val):#key字段名 val值
+
+    # 输入表名、字段和条件，删除一条记录(通用)
+    def DeleteRecord(self, table, key, val):  # key字段名 val值
         mysql = Mysql()
         sql = "delete from " + table + " where " + str(key) + "=" + str(val)
         try:
-            mysql.delete(sql,None)
+            mysql.delete(sql, None)
             mysql.end('commit')
             print("delete success!")
         except Exception as e:
             print("error")
             mysql.end(None)
         mysql.dispose()
-    #更改数据表记录,输入条件字段和修改字段（通用）
-    def UpdateRecord(self,table,key1,val1,key2,val2):#key1和val1是修改键和值，val1和val2是条件键和值，如果是val是非数字，则需要写成'"数"'传入
+
+    # 更改数据表记录,输入条件字段和修改字段（通用）
+    def UpdateRecord(self, table, key1, val1, key2, val2):  # key1和val1是修改键和值，val1和val2是条件键和值，如果是val是非数字，则需要写成'"数"'传入
         mysql = Mysql()
         sql = "update " + table + " set " + key1 + "='" + val1 + "' where " + key2 + "='" + val2 + "'"
         try:
-            mysql.update(sql,None)
+            mysql.update(sql, None)
             # mysql.update("update book")
             mysql.end('commit')
             print("update succes!")
@@ -204,7 +224,7 @@ add = BookAPI()
 # print(add.GetBookByName("地下地上中级概论"))
 
 # # 传入一个对象插入
-# test = MiddleBook()
+# test = Book()
 # test.set_bookid('300001')
 # test.set_bookname('1')
 # test.set_author('1')
@@ -231,7 +251,3 @@ add = BookAPI()
 # test.set_bookid('100003')
 # res = add.GetBookByField(test)
 # print(res)
-
-
-
-

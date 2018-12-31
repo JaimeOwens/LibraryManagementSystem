@@ -314,7 +314,7 @@ def InsertBorrowTable(dbhandle):
 
 
 def CreateIllegalTable(dbhandle):
-    sql = "CREATE TABLE illegal(" \
+    sql = "CREATE TABLE Illegal(" \
           "illegalid VARCHAR(20) NOT NULL PRIMARY KEY," \
           "userid VARCHAR(20) NOT NULL," \
           "bookid VARCHAR(20) NOT NULL," \
@@ -345,7 +345,7 @@ def InsertIllegalTable(dbhandle):
             endindex += booknumber
             for book in resultbook1[startindex:endindex]:
                 illegaldate = book[2] + datetime.timedelta(random.randint(1, 1000))
-                sql = "INSERT INTO illegal" \
+                sql = "INSERT INTO Illegal" \
                       "(illegalid,userid,bookid,amount,isprocessed,illegaldate,illegaltype) " \
                       "VALUES" \
                       "('{}','{}','{}',{},'否','{}','损坏'" \
@@ -355,7 +355,7 @@ def InsertIllegalTable(dbhandle):
         else:
             for book in resultbook1[startindex:]:
                 illegaldate = book[2] + datetime.timedelta(random.randint(1, 1000))
-                sql = "INSERT INTO illegal" \
+                sql = "INSERT INTO Illegal" \
                       "(illegalid,userid,bookid,amount,isprocessed,illegaldate,illegaltype) " \
                       "VALUES" \
                       "('{}','{}','{}',{},'否','{}','损坏'" \
@@ -399,7 +399,7 @@ def InsertIllegalAndBorrowTable(dbhandle, illegalid, borrowid):
                 ExecuteSQL(dbhandle, sql)
                 borrowid += 1
                 illegaldate = actretdate
-                sql = "INSERT INTO illegal" \
+                sql = "INSERT INTO Illegal" \
                       "(illegalid,userid,bookid,amount,isprocessed,illegaldate,illegaltype) " \
                       "VALUES" \
                       "('{}','{}','{}',{},'否','{}','超时'" \
@@ -421,7 +421,7 @@ def InsertIllegalAndBorrowTable(dbhandle, illegalid, borrowid):
                 ExecuteSQL(dbhandle, sql)
                 borrowid += 1
                 illegaldate = actretdate
-                sql = "INSERT INTO illegal" \
+                sql = "INSERT INTO Illegal" \
                       "(illegalid,userid,bookid,amount,isprocessed,illegaldate,illegaltype) " \
                       "VALUES" \
                       "('{}','{}','{}',{},'否','{}','超时'" \

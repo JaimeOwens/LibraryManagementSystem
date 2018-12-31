@@ -1,14 +1,15 @@
-from MiddleBook import  MiddleBook
-from MiddleBorrow import MiddleBorrow
-from Middleillegal import Middleillegal
+from Book import Book
+from Borrow import Borrow
+from illegal import Illegal
+from Admin import Admin
 
-class ShowObj:
-    #book转换成obj
-    def ShowBook(self,Tum):
+class MiddleLayer:
+    # book转换成obj
+    def ShowBook(self, Tum):
         List = []
         for record in Tum:
-            #每条记录处理
-            books = MiddleBook()
+            # 每条记录处理
+            books = Book()
             books.set_bookid(record[0])
             books.set_bookname(record[1])
             books.set_author(record[2])
@@ -29,12 +30,13 @@ class ShowObj:
             List.append(books)
         result = tuple(List)
         return result
-    #借阅转换成obj
-    def ShowBorrow(self,Tum):
+
+    # 借阅转换成obj
+    def ShowBorrow(self, Tum):
         List = []
         for record in Tum:
-            #每条记录处理
-            borrowed = MiddleBorrow()
+            # 每条记录处理
+            borrowed = Borrow()
             borrowed.set_borrowid(record[0])
             borrowed.set_userid(record[1])
             borrowed.set_bookid(record[2])
@@ -44,12 +46,13 @@ class ShowObj:
             List.append(borrowed)
         result = tuple(List)
         return result
-    #违章转换成obj
-    def ShowIlleal(self,Tum):
+
+    # 违章转换成obj
+    def ShowIllegal(self, Tum):
         List = []
         for record in Tum:
-            #每条记录处理
-            illegal = Middleillegal()
+            # 每条记录处理
+            illegal = Illegal()
             illegal.set_illegalid(record[0])
             illegal.set_userid(record[1])
             illegal.set_bookid(record[2])
@@ -59,5 +62,17 @@ class ShowObj:
             illegal.set_illegaltype(record[6])
             List.append(illegal)
         result = tuple(List)
-        return  result
+        return result
 
+    #管理员转换成obj
+    def ShowAdmin(self, Tum):
+        List = []
+        for record in Tum:
+            admin = Admin()
+            admin.set_adminid(record[0])
+            admin.set_passwd(record[1])
+            admin.set_connection(record[2])
+            admin.set_permission(record[3])
+            List.append(admin)
+        result = tuple(List)
+        return result
