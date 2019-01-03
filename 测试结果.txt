@@ -1,0 +1,965 @@
+********************************************
+**以下是图书管理系统各单元的测试结果   **
+**格式：                                                  **
+**测试模块-测试功能名称                         **
+**输入参数                                               **
+**输出结果                                               **
+**备注：部分测试结果过多，采用少量结果**
+********************************************
+
+TestUserClient-MatchIsUser()
+['10973', '941075']
+This object is existes
+
+TestUserClient-GetUserShow()
+username:孙冉豪
+password:437108
+faculty:信息学院
+department:物联网
+age:23
+gendar:male
+useridentity:硕士
+userconnection:1307410895362
+status:在借
+insert success!
+TestUserClient
+This object is existes
+
+id:11002-InsertUserRecord()
+username:sanshui
+password:123456
+faculty:信息
+department:计算机
+age:20
+gendar:female
+useridentity:硕士
+userconnection:8088888
+status:正常
+
+TestUserClient-GetUserRecord()
+{'faculty': '信息学院', 'status': '在借'}
+The user you found:
+10002	孙冉豪	437108	信息学院	物联网	23	male	硕士	1307410895362	在借
+10021	赵琦欣	980167	信息学院	计科	22	female	本科	1880198374265	在借
+10023	吴川聪	306795	信息学院	计科	21	male	本科	1393410687592	在借
+10048	郑琪瑜	384295	信息学院	计科	28	female	博士	1313540927168	在借
+10053	王雅瑜	138294	信息学院	信息	21	female	本科	1304157683920	在借
+10059	郑山睿	819730	信息学院	数媒	24	male	硕士	1312807653149	在借
+10078	吴冉勇	308796	信息学院	信息	24	male	硕士	1885369108742	在借
+10079	孙涛聪	953410	信息学院	计科	28	male	博士	1300345126798	在借
+10085	郑涛明	156739	信息学院	信息	24	male	硕士	1304285617903	在借
+10090	钱琦菲	651028	信息学院	信息	42	female	教师	1305639187420	在借
+10097	孙婷宜	925341	信息学院	网工	28	female	博士	1311295673048	在借
+10102	孙羽勇	489571	信息学院	数媒	19	male	本科	1884978536012	在借
+10111	李毅辉	632578	信息学院	网工	18	male	本科	1305923607481	在借
+10112	吴毅凯	610328	信息学院	数媒	49	male	教师	1399627804513	在借
+10113	李韵欣	137896	信息学院	数媒	21	female	本科	1305923610784	在借
+10122	吴雅熙	058926	信息学院	数媒	24	female	硕士	1884037681592	在借
+10126	王士睿	450368	信息学院	物联网	55	male	教师	1399321680745	在借
+10129	李之强	461328	信息学院	信息	21	male	本科	1880918372654	在借
+10133	周佳珞	594162	信息学院	计科	28	female	博士	1317132564809	在借
+10147	郑士睿	107942	信息学院	数媒	19	male	本科	1315764128093	在借
+10161	周海辉	049523	信息学院	网工	18	male	本科	1313891506742	在借
+10166	郑羽豪	684230	信息学院	信息	23	male	硕士	1305613987024	在借
+10200	郑韵敏	439610	信息学院	计科	28	female	博士	1311935476208	在借
+10211	赵婷熙	654012	信息学院	计科	18	female	本科	1888619502347	在借
+10217	孙毅辉	624398	信息学院	计科	27	male	博士	1884907381526	在借
+10218	孙琪欣	580724	信息学院	信息	35	female	教师	1882180396745	在借
+10237	周士强	891264	信息学院	物联网	20	male	本科	1885213470896	在借
+10240	钱舒宜	739210	信息学院	计科	35	female	教师	1304613709528	在借
+10270	李琪姗	492537	信息学院	网工	46	female	教师	1395906817342	在借
+10290	王琦熙	039728	信息学院	信息	22	female	本科	1889315274806	在借
+10304	钱涛勇	592813	信息学院	数媒	21	male	本科	1313148562097	在借
+10309	孙琦姗	806523	信息学院	网工	19	female	本科	1880973825641	在借
+10310	钱山明	183294	信息学院	物联网	21	male	本科	1398723491605	在借
+10325	孙韵宜	985204	信息学院	物联网	23	female	硕士	1309840617532	在借
+10349	赵雅欣	503724	信息学院	信息	20	female	本科	1882759163804	在借
+10392	钱冉辉	732581	信息学院	网工	23	male	硕士	1312876394510	在借
+10415	赵嘉敏	632078	信息学院	网工	32	female	教师	1887138290465	在借
+10435	李士明	164359	信息学院	计科	19	male	本科	1390758912643	在借
+10455	钱山博	948621	信息学院	物联网	20	male	本科	1882709385146	在借
+10482	钱婷瑜	427135	信息学院	数媒	20	female	本科	1398047329615	在借
+10510	周洁宜	530129	信息学院	信息	20	female	本科	1319245673108	在借
+10512	吴子凯	830527	信息学院	网工	19	male	本科	1881459206837	在借
+10544	李雅雨	928067	信息学院	网工	20	female	本科	1311538072694	在借
+10546	钱洁彤	324760	信息学院	物联网	23	female	硕士	1316475032198	在借
+10553	赵雅菲	970258	信息学院	网工	21	female	本科	1306749082513	在借
+10558	王琪珞	478236	信息学院	物联网	20	female	本科	1315478093126	在借
+10569	郑羽博	319746	信息学院	物联网	22	male	本科	1399283105467	在借
+10572	周涛豪	075621	信息学院	计科	40	male	教师	1301257038496	在借
+10573	孙琦雨	260314	信息学院	信息	25	female	硕士	1300614783259	在借
+10577	李婷敏	740385	信息学院	网工	44	female	教师	1315082314796	在借
+10583	王佳珞	824601	信息学院	信息	25	female	硕士	1396290483175	在借
+10589	赵海博	098367	信息学院	信息	25	male	硕士	1883596027841	在借
+10591	赵冉昱	854702	信息学院	物联网	27	male	博士	1310491253786	在借
+10597	郑涛强	035142	信息学院	计科	20	male	本科	1317206384951	在借
+10609	郑山强	439186	信息学院	计科	26	male	博士	1300532617489	在借
+10612	李涛辉	830195	信息学院	物联网	19	male	本科	1889561482307	在借
+10618	王羽勇	486359	信息学院	计科	47	male	教师	1883724509861	在借
+10623	周舒熙	369805	信息学院	信息	44	female	教师	1888150294376	在借
+10627	吴雅宜	820617	信息学院	物联网	26	female	博士	1397120489536	在借
+10648	郑诗雨	520943	信息学院	计科	23	female	硕士	1318537102694	在借
+10655	周雅珞	569781	信息学院	计科	22	female	本科	1308674531092	在借
+10673	周琦姗	410276	信息学院	物联网	24	female	硕士	1302594306718	在借
+10695	王子明	685093	信息学院	网工	26	male	博士	1885908641327	在借
+10696	周韵瑜	879546	信息学院	计科	22	female	本科	1306570239418	在借
+10697	赵毅昱	258670	信息学院	网工	18	male	本科	1315287096341	在借
+10699	赵毅睿	690814	信息学院	数媒	24	male	硕士	1882360815947	在借
+10713	钱山聪	871495	信息学院	物联网	18	male	本科	1303579620418	在借
+10717	李之聪	706853	信息学院	信息	25	male	硕士	1313957126804	在借
+10729	钱洁敏	382745	信息学院	数媒	19	female	本科	1391043957862	在借
+10735	郑士辉	462795	信息学院	物联网	21	male	本科	1318735641029	在借
+10738	赵士豪	432196	信息学院	计科	23	male	硕士	1300317245869	在借
+10740	周琦菲	891607	信息学院	计科	43	female	教师	1314631729850	在借
+10742	赵羽聪	412508	信息学院	物联网	20	male	本科	1393490827651	在借
+10750	周佳姗	459372	信息学院	网工	24	female	硕士	1313201697485	在借
+10756	钱之勇	803914	信息学院	信息	21	male	本科	1319851760324	在借
+10760	钱羽豪	871230	信息学院	数媒	22	male	本科	1307932058461	在借
+10768	周舒姗	609834	信息学院	物联网	21	female	本科	1316437259810	在借
+10770	郑洁敏	894752	信息学院	计科	20	female	本科	1304685012973	在借
+10775	吴士聪	798503	信息学院	计科	18	male	本科	1889084316257	在借
+10785	赵士聪	780924	信息学院	数媒	20	male	本科	1884358107269	在借
+10798	李之昱	054783	信息学院	计科	22	male	本科	1306809753214	在借
+10801	钱羽睿	958062	信息学院	物联网	27	male	博士	1314532019768	在借
+10812	李洁彤	056734	信息学院	信息	39	female	教师	1881479305628	在借
+10814	郑羽博	237098	信息学院	数媒	35	male	教师	1393674015829	在借
+10823	郑嘉宜	362984	信息学院	计科	24	female	硕士	1399037518246	在借
+10848	郑嘉宜	295018	信息学院	网工	25	female	硕士	1307312054896	在借
+10851	吴士豪	726841	信息学院	网工	34	male	教师	1314598273061	在借
+10857	郑毅聪	647902	信息学院	信息	19	male	本科	1311675203489	在借
+10876	王冉昱	816745	信息学院	网工	25	male	硕士	1305897016423	在借
+10885	王琦瑜	602157	信息学院	网工	20	female	本科	1310736128549	在借
+10899	王嘉彤	084392	信息学院	计科	50	female	教师	1319506417328	在借
+10904	李山凯	914527	信息学院	计科	26	male	博士	1399783204561	在借
+10905	钱诗彤	375126	信息学院	物联网	22	female	本科	1886297308541	在借
+10908	郑士凯	019845	信息学院	网工	21	male	本科	1306714502938	在借
+10921	王洁珞	915824	信息学院	数媒	51	female	教师	1885618472390	在借
+10923	钱洁姗	148207	信息学院	网工	19	female	本科	1396094278513	在借
+10936	吴冉凯	569138	信息学院	信息	20	male	本科	1888736014952	在借
+10937	吴琪熙	329810	信息学院	数媒	39	female	教师	1304087519623	在借
+10945	周冉辉	219654	信息学院	数媒	18	male	本科	1312045618379	在借
+10948	王琦菲	059418	信息学院	物联网	21	female	本科	1300921683457	在借
+10955	吴琪菲	468092	信息学院	数媒	19	female	本科	1888632754109	在借
+10968	钱嘉姗	604138	信息学院	物联网	28	female	博士	1880365178492	在借
+10974	李洁敏	836401	信息学院	计科	20	female	本科	1300729836514	在借
+10976	吴琪熙	817534	信息学院	网工	31	female	教师	1312986340751	在借
+10977	钱士辉	971826	信息学院	计科	27	male	博士	1888032491765	在借
+10978	钱雅雨	903176	信息学院	计科	40	female	教师	1309650174823	在借
+10992	郑子勇	476210	信息学院	信息	39	male	教师	1881830457692	在借
+
+TestUserClient-GetUserRecord()
+{'gender': 'female', 'useridentity': '教师'}
+The user you found:
+10016	钱洁敏	685972	信息学院	物联网	46	female	教师	1303702481695	正常
+10026	王琪熙	912834	信息学院	信息	47	female	教师	1885397682014	正常
+10036	周洁珞	124567	工学院	机械	47	female	教师	1307814632059	正常
+10043	李雅姗	536412	工学院	车辆	33	female	教师	1399085134726	损坏
+10065	周韵彤	598016	理学院	数学	32	female	教师	1889130426857	超时
+10074	王琦瑜	196325	信息学院	网工	36	female	教师	1302563198074	正常
+10089	郑嘉欣	320579	工学院	车辆	39	female	教师	1885170892463	超时
+10090	钱琦菲	651028	信息学院	信息	42	female	教师	1305639187420	在借
+10091	郑佳敏	638412	理学院	数学	49	female	教师	1319587046321	损坏
+10115	孙婷瑜	290634	信息学院	信息	54	female	教师	1312456831709	超时
+10154	李诗宜	926107	工学院	机械	33	female	教师	1881096538742	正常
+10160	吴琦瑜	154827	工学院	电气	44	female	教师	1884273095168	在借
+10165	郑佳雨	785209	信息学院	数媒	38	female	教师	1396037214958	正常
+10169	赵韵彤	512706	工学院	机械	50	female	教师	1391648790352	正常
+10195	周韵菲	815624	工学院	机械	53	female	教师	1314783690152	正常
+10207	赵雅姗	486309	理学院	电子	51	female	教师	1309257016438	正常
+10212	钱雅彤	573689	工学院	车辆	33	female	教师	1305270643981	正常
+10216	钱洁菲	068452	工学院	自动化	55	female	教师	1317951236840	正常
+10218	孙琪欣	580724	信息学院	信息	35	female	教师	1882180396745	在借
+10231	赵洁菲	617984	理学院	电子	51	female	教师	1312051768349	在借
+10239	周雅欣	473052	工学院	自动化	40	female	教师	1883962104587	超时
+10240	钱舒宜	739210	信息学院	计科	35	female	教师	1304613709528	在借
+10251	李雅敏	851703	理学院	数学	54	female	教师	1393281560974	正常
+10252	孙韵珞	837952	信息学院	物联网	52	female	教师	1391027865943	正常
+10254	赵婷欣	930581	理学院	电子	41	female	教师	1883590124687	在借
+10270	李琪姗	492537	信息学院	网工	46	female	教师	1395906817342	在借
+10300	李诗珞	015876	理学院	数学	47	female	教师	1300142356789	正常
+10305	郑诗雨	250839	信息学院	计科	40	female	教师	1310235476198	正常
+10311	吴洁姗	218903	工学院	机械	38	female	教师	1319705342816	在借
+10327	赵婷菲	129807	信息学院	数媒	37	female	教师	1305038469127	正常
+10336	周雅熙	245367	理学院	电子	33	female	教师	1315483706129	正常
+10339	王洁珞	287593	理学院	电子	38	female	教师	1309365072814	正常
+10347	王嘉姗	841203	理学院	电子	33	female	教师	1394389156702	正常
+10356	李佳姗	840697	工学院	车辆	37	female	教师	1394921685037	损坏
+10362	王诗菲	684073	工学院	自动化	33	female	教师	1398720693154	正常
+10363	吴琪珞	904237	理学院	数学	31	female	教师	1312138476950	在借
+10410	李琪菲	027819	工学院	机械	32	female	教师	1302139506748	正常
+10415	赵嘉敏	632078	信息学院	网工	32	female	教师	1887138290465	在借
+10429	赵佳欣	630514	工学院	电气	46	female	教师	1397345210986	正常
+10434	郑嘉熙	852791	理学院	电子	32	female	教师	1883607954812	正常
+10439	孙韵彤	126053	信息学院	数媒	29	female	教师	1390786543129	正常
+10446	孙舒敏	573946	理学院	数学	54	female	教师	1316571382049	正常
+10454	李婷珞	492036	理学院	数学	48	female	教师	1301249830765	损坏
+10457	李婷宜	615098	信息学院	数媒	32	female	教师	1303410965827	正常
+10462	赵嘉雨	016987	理学院	电子	44	female	教师	1889560218743	超时
+10472	郑婷瑜	426783	理学院	数学	49	female	教师	1880478623159	在借
+10486	周琦珞	461059	理学院	数学	36	female	教师	1313854019627	损坏
+10492	郑诗欣	402386	工学院	电气	30	female	教师	1885981437602	在借
+10521	李诗敏	536819	理学院	电子	55	female	教师	1887812490536	正常
+10527	郑婷欣	809546	理学院	电子	32	female	教师	1396109458237	正常
+10531	李舒姗	924016	理学院	电子	35	female	教师	1392673198405	正常
+10540	周琦菲	456873	信息学院	信息	47	female	教师	1309073184625	超时
+10545	孙嘉欣	975023	理学院	数学	44	female	教师	1889273068514	正常
+10552	赵雅珞	042583	信息学院	计科	45	female	教师	1888604793251	正常
+10554	孙嘉菲	538107	理学院	数学	54	female	教师	1880793416582	在借
+10568	孙嘉雨	576390	理学院	电子	41	female	教师	1396107852493	在借
+10570	吴舒熙	304685	工学院	机械	31	female	教师	1318493607215	正常
+10577	李婷敏	740385	信息学院	网工	44	female	教师	1315082314796	在借
+10587	周诗熙	492167	工学院	机械	42	female	教师	1398513729604	在借
+10598	王佳彤	192835	工学院	机械	43	female	教师	1889467023518	正常
+10599	吴诗瑜	542378	理学院	数学	42	female	教师	1885728460913	正常
+10602	赵琦欣	019852	理学院	电子	41	female	教师	1888517403629	正常
+10605	王嘉熙	469103	理学院	数学	35	female	教师	1303042567981	在借
+10623	周舒熙	369805	信息学院	信息	44	female	教师	1888150294376	在借
+10626	王韵彤	624197	信息学院	物联网	53	female	教师	1310536419287	正常
+10637	李韵雨	601795	工学院	车辆	55	female	教师	1302953170468	在借
+10638	钱舒珞	713645	理学院	数学	48	female	教师	1889328467105	正常
+10650	孙洁宜	142950	信息学院	网工	40	female	教师	1886534901872	超时
+10654	孙诗瑜	384670	理学院	数学	53	female	教师	1305086729134	正常
+10656	赵嘉欣	953148	理学院	数学	41	female	教师	1314309687251	正常
+10659	周雅欣	614975	信息学院	物联网	29	female	教师	1396412985073	正常
+10662	李嘉菲	214058	理学院	电子	43	female	教师	1397385629140	损坏
+10672	孙舒敏	562314	工学院	车辆	49	female	教师	1312783406195	正常
+10728	孙佳菲	126357	信息学院	信息	50	female	教师	1394953680127	正常
+10740	周琦菲	891607	信息学院	计科	43	female	教师	1314631729850	在借
+10751	吴佳欣	625407	理学院	电子	40	female	教师	1391065429387	正常
+10757	赵韵姗	258196	理学院	数学	29	female	教师	1881268437059	损坏
+10767	王琦菲	596038	工学院	车辆	35	female	教师	1885870126493	正常
+10793	郑佳雨	340867	工学院	自动化	44	female	教师	1392850317649	在借
+10812	李洁彤	056734	信息学院	信息	39	female	教师	1881479305628	在借
+10813	李婷雨	754960	工学院	车辆	52	female	教师	1882183546790	正常
+10818	赵婷熙	105368	工学院	车辆	36	female	教师	1398160947532	损坏
+10830	孙婷宜	832649	理学院	电子	47	female	教师	1302780965314	在借
+10833	吴琪雨	623854	理学院	电子	36	female	教师	1309271635408	超时
+10837	钱婷欣	257084	理学院	电子	32	female	教师	1395103269784	超时
+10839	吴韵珞	048237	信息学院	物联网	55	female	教师	1310724913856	损坏
+10842	钱舒菲	401356	工学院	自动化	34	female	教师	1315340728916	在借
+10865	郑韵欣	342605	理学院	电子	46	female	教师	1315974381602	正常
+10873	赵琦珞	417680	理学院	数学	49	female	教师	1392617589430	正常
+10895	吴婷宜	095816	信息学院	物联网	37	female	教师	1395762384109	正常
+10899	王嘉彤	084392	信息学院	计科	50	female	教师	1319506417328	在借
+10916	吴诗珞	986745	工学院	自动化	39	female	教师	1304289756103	正常
+10920	周婷敏	682194	理学院	数学	40	female	教师	1889860273145	正常
+10921	王洁珞	915824	信息学院	数媒	51	female	教师	1885618472390	在借
+10937	吴琪熙	329810	信息学院	数媒	39	female	教师	1304087519623	在借
+10939	李琦姗	964037	工学院	电气	45	female	教师	1395438976012	损坏
+10942	吴佳欣	673184	工学院	车辆	30	female	教师	1316290518473	超时
+10943	周舒敏	907584	理学院	电子	38	female	教师	1302716495380	超时
+10966	孙琪姗	785391	理学院	数学	49	female	教师	1309430768521	正常
+10976	吴琪熙	817534	信息学院	网工	31	female	教师	1312986340751	在借
+10978	钱雅雨	903176	信息学院	计科	40	female	教师	1309650174823	在借
+10989	郑婷宜	809673	工学院	电气	36	female	教师	1301437926805	超时
+10990	赵琦敏	052148	信息学院	物联网	30	female	教师	1392963805147	超时
+10996	周婷彤	529031	工学院	车辆	30	female	教师	1302387469105	正常
+
+TestUserClient-GetUserRecord()
+{'faculty': '工学院', 'age': '20', 'status': '正常'}
+The user you found:
+10042	王雅敏	749062	工学院	自动化	20	female	本科	1395143067928	正常
+10072	吴川强	287914	工学院	电气	20	male	本科	1318761093524	正常
+10121	王毅强	467203	工学院	车辆	20	male	本科	1889632048751	正常
+10130	孙韵姗	025471	工学院	机械	20	female	本科	1884935187206	正常
+10202	赵子聪	532864	工学院	车辆	20	male	本科	1317031548692	正常
+10213	赵琦敏	243075	工学院	车辆	20	female	本科	1885926340871	正常
+10241	孙山勇	316092	工学院	机械	20	male	本科	1399160835472	正常
+10284	王海聪	120643	工学院	自动化	20	male	本科	1310938475261	正常
+10322	王山豪	895103	工学院	电气	20	male	本科	1884739156208	正常
+10442	李雅宜	723985	工学院	电气	20	female	本科	1393194257608	正常
+10461	周士凯	912354	工学院	机械	20	male	本科	1887319268054	正常
+10629	周佳敏	254803	工学院	电气	20	female	本科	1319206741385	正常
+10712	吴士强	370591	工学院	自动化	20	male	本科	1302176034589	正常
+10855	周冉凯	296835	工学院	车辆	20	male	本科	1396873941250	正常
+10957	王之勇	789653	工学院	自动化	20	male	本科	1394396018725	正常
+10997	李冉昱	980521	工学院	自动化	20	male	本科	1883507816924	正常
+
+TestAdminClient-matchIsAdmin()
+['256491', '439628']
+login success!
+256491
+[4]
+
+TestAdminClient-GetAdminPermission()
+['168452']
+1
+
+TestAdminClient-GetAdminRecord()
+_adminid:168452
+_passwd:218493
+_connecttion:1313690418257
+_permission:1
+_adminid:214765
+_passwd:697158
+_connecttion:1317581430296
+_permission:2
+_adminid:256491
+_passwd:439628
+_connecttion:1885416983270
+_permission:4
+_adminid:257836
+_passwd:965837
+_connecttion:1310179852634
+_permission:0
+_adminid:561483
+_passwd:138649
+_connecttion:1312498761503
+_permission:6
+_adminid:629783
+_passwd:315764
+_connecttion:1309284561370
+_permission:3
+_adminid:954176
+_passwd:324176
+_connecttion:1395416873902
+_permission:5
+_permission:4
+_adminid:257836
+_passwd:965837
+_connecttion:1310179852634
+_permission:0
+_adminid:561483
+_passwd:138649
+_connecttion:1312498761503
+_permission:6
+_adminid:629783
+_passwd:315764
+_connecttion:1309284561370
+_permission:3
+_adminid:954176
+_passwd:324176
+_connecttion:1395416873902
+_permission:5
+
+TestBookClient-GetAllBookRecord()
+[5]
+_bookid:100000
+_bookname:传动机械综合技术
+_author:朱刚军
+_pages:575
+_collecttime:2010-02-21
+_version:第一版
+_major:工业技术
+_discipline:机械工业
+_isbn:815-598-0657-01-9
+_booklanguage:英文
+_publisher:北京林业大学出版社
+_status:在借
+_abstract:
+_stack:二层
+_shelf:19
+_floor:3
+_bookvalue:238.69
+_bookid:100001
+_bookname:应用气象学大气探测综合指南
+_author:杨磊伟
+_pages:160
+_collecttime:2014-12-04
+_version:第三版
+_major:天文地理学
+_discipline:气象学
+_isbn:182-385-5861-90-2
+_booklanguage:中文
+_publisher:人民邮电出版社
+_status:在借
+_abstract:
+_stack:四层
+_shelf:7
+_floor:1
+_bookvalue:72.23
+_bookid:100002
+_bookname:人工智能C++进阶理论
+_author:许国鹏
+_pages:390
+_collecttime:2013-11-24
+_version:第二版
+_major:工业技术
+_discipline:计算机技术
+_isbn:209-750-6108-08-7
+_booklanguage:中文
+_publisher:人民邮电出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:2
+_floor:1
+_bookvalue:194.97
+_bookid:100003
+_bookname:地上矿石通用技术
+_author:沈伟磊
+_pages:295
+_collecttime:2008-04-02
+_version:第二版
+_major:工业技术
+_discipline:矿业技术
+_isbn:791-745-3492-86-0
+_booklanguage:中文
+_publisher:机械工业出版社
+_status:在借
+_abstract:
+_stack:四层
+_shelf:16
+_floor:2
+_bookvalue:182.78
+_bookid:100004
+_bookname:潜水潮汐通用理论
+_author:杨鹏
+_pages:183
+_collecttime:2014-09-23
+_version:第一版
+_major:天文地理学
+_discipline:海洋学
+_isbn:017-094-6579-87-4
+_booklanguage:中文
+_publisher:清华大学出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:2
+_floor:1
+_bookvalue:204.52
+
+TestBookClient-GetBookByDis()
+数学
+_bookid:100006
+_bookname:微积分常微分新版概论
+_author:蒋刚
+_pages:331
+_collecttime:1996-04-17
+_version:第一版
+_major:数理科学与化学
+_discipline:数学
+_isbn:923-265-8639-48-4
+_booklanguage:中文
+_publisher:北京林业大学出版社
+_status:正常
+_abstract:
+_stack:三层
+_shelf:28
+_floor:1
+_bookvalue:121.74
+_bookid:100008
+_bookname:几何拓扑新版科学
+_author:朱伟刚
+_pages:131
+_collecttime:2008-06-22
+_version:第一版
+_major:数理科学与化学
+_discipline:数学
+_isbn:165-479-3849-19-6
+_booklanguage:英文
+_publisher:北京大学出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:22
+_floor:1
+_bookvalue:91.83
+
+TestBookClient-GetBookByDis()
+矿业技术
+_bookid:100003
+_bookname:地上矿石通用技术
+_author:沈伟磊
+_pages:295
+_collecttime:2008-04-02
+_version:第二版
+_major:工业技术
+_discipline:矿业技术
+_isbn:791-745-3492-86-0
+_booklanguage:中文
+_publisher:机械工业出版社
+_status:在借
+_abstract:
+_stack:四层
+_shelf:16
+_floor:2
+_bookvalue:182.78
+_bookid:100007
+_bookname:地下地上中级概论
+_author:朱刚
+_pages:578
+_collecttime:2000-11-10
+_version:第二版
+_major:工业技术
+_discipline:矿业技术
+_isbn:958-620-0571-23-4
+_booklanguage:中文
+_publisher:国家科学出版社
+_status:超时
+_abstract:
+_stack:五层
+_shelf:14
+_floor:1
+_bookvalue:108.86
+
+TestBookClient-GetBookByMaj
+工业技术
+_bookid:100000
+_bookname:传动机械综合技术
+_author:朱刚军
+_pages:575
+_collecttime:2010-02-21
+_version:第一版
+_major:工业技术
+_discipline:机械工业
+_isbn:815-598-0657-01-9
+_booklanguage:英文
+_publisher:北京林业大学出版社
+_status:在借
+_abstract:
+_stack:二层
+_shelf:19
+_floor:3
+_bookvalue:238.69
+_bookid:100002
+_bookname:人工智能C++进阶理论
+_author:许国鹏
+_pages:390
+_collecttime:2013-11-24
+_version:第二版
+_major:工业技术
+_discipline:计算机技术
+_isbn:209-750-6108-08-7
+_booklanguage:中文
+_publisher:人民邮电出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:2
+_floor:1
+_bookvalue:194.97
+
+TestBookClient-GetBookByMaj（）
+数理科学与化学
+_bookid:100006
+_bookname:微积分常微分新版概论
+_author:蒋刚
+_pages:331
+_collecttime:1996-04-17
+_version:第一版
+_major:数理科学与化学
+_discipline:数学
+_isbn:923-265-8639-48-4
+_booklanguage:中文
+_publisher:北京林业大学出版社
+_status:正常
+_abstract:
+_stack:三层
+_shelf:28
+_floor:1
+_bookvalue:121.74
+_bookid:100008
+_bookname:几何拓扑新版科学
+_author:朱伟刚
+_pages:131
+_collecttime:2008-06-22
+_version:第一版
+_major:数理科学与化学
+_discipline:数学
+_isbn:165-479-3849-19-6
+_booklanguage:英文
+_publisher:北京大学出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:22
+_floor:1
+_bookvalue:91.83
+
+TestBookClient-GetBookByName()
+Java
+_bookid:100017
+_bookname:Java深度学习总结手册
+_author:尤平
+_pages:180
+_collecttime:2011-09-25
+_version:第二版
+_major:工业技术
+_discipline:计算机技术
+_isbn:150-942-0298-65-0
+_booklanguage:英文
+_publisher:北京大学出版社
+_status:在借
+_abstract:
+_stack:一层
+_shelf:19
+_floor:2
+_bookvalue:12.12
+_bookid:100033
+_bookname:人工智能Java中级科学
+_author:朱刚
+_pages:338
+_collecttime:2010-12-05
+_version:第三版
+_major:工业技术
+_discipline:计算机技术
+_isbn:843-023-3758-78-6
+_booklanguage:英文
+_publisher:北京林业大学出版社
+_status:在借
+_abstract:
+_stack:一层
+_shelf:24
+_floor:3
+_bookvalue:211.79
+
+TestBookClient--GetBookByName()
+Python
+_bookid:100023
+_bookname:C++Python新版技术
+_author:朱斌
+_pages:446
+_collecttime:2006-06-17
+_version:第一版
+_major:工业技术
+_discipline:计算机技术
+_isbn:063-607-9657-40-9
+_booklanguage:中文
+_publisher:中国科研出版社
+_status:在借
+_abstract:
+_stack:五层
+_shelf:17
+_floor:5
+_bookvalue:299.53
+_bookid:100051
+_bookname:PythonJava通用研究
+_author:沈鹏建
+_pages:598
+_collecttime:2012-12-01
+_version:第三版
+_major:工业技术
+_discipline:计算机技术
+_isbn:461-083-9053-89-3
+_booklanguage:中文
+_publisher:人民邮电出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:5
+_floor:1
+_bookvalue:237.95
+
+TestBookClient-GetBookByName()
+C++
+_bookid:100002
+_bookname:人工智能C++进阶理论
+_author:许国鹏
+_pages:390
+_collecttime:2013-11-24
+_version:第二版
+_major:工业技术
+_discipline:计算机技术
+_isbn:209-750-6108-08-7
+_booklanguage:中文
+_publisher:人民邮电出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:2
+_floor:1
+_bookvalue:194.97
+_bookid:100005
+_bookname:C++人工智能进阶理论
+_author:许鹏
+_pages:178
+_collecttime:2018-12-08
+_version:第二版
+_major:工业技术
+_discipline:计算机技术
+_isbn:429-561-7138-71-8
+_booklanguage:英文
+_publisher:中国科研出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:11
+_floor:5
+_bookvalue:160.07
+
+TestBookClient-GetBookByField()
+_bookid:100024
+_bookname:岩石学地层学高级手册
+_author:韩国
+_pages:474
+_collecttime:2009-07-31
+_version:第三版
+_major:天文地理学
+_discipline:地质学
+_isbn:571-527-5364-39-9
+_booklanguage:中文
+_publisher:中国科研出版社
+_status:超时
+_abstract:
+_stack:三层
+_shelf:6
+_floor:5
+_bookvalue:264.18
+_bookid:100324
+_bookname:地球化学岩石学综合概论
+_author:韩国
+_pages:233
+_collecttime:2006-09-18
+_version:第二版
+_major:天文地理学
+_discipline:地质学
+_isbn:089-390-6478-47-4
+_booklanguage:英文
+_publisher:国家科学出版社
+_status:正常
+_abstract:
+_stack:三层
+_shelf:22
+_floor:1
+_bookvalue:231.8
+
+TestBookClient-GetBookByField()
+_bookid:100000
+_bookname:传动机械综合技术
+_author:朱刚军
+_pages:575
+_collecttime:2010-02-21
+_version:第一版
+_major:工业技术
+_discipline:机械工业
+_isbn:815-598-0657-01-9
+_booklanguage:英文
+_publisher:北京林业大学出版社
+_status:在借
+_abstract:
+_stack:二层
+_shelf:19
+_floor:3
+_bookvalue:238.69
+_bookid:100008
+_bookname:几何拓扑新版科学
+_author:朱伟刚
+_pages:131
+_collecttime:2008-06-22
+_version:第一版
+_major:数理科学与化学
+_discipline:数学
+_isbn:165-479-3849-19-6
+_booklanguage:英文
+_publisher:北京大学出版社
+_status:正常
+_abstract:
+_stack:二层
+_shelf:22
+_floor:1
+_bookvalue:91.83
+
+TestBookClient-GetBookByField()
+_bookid:100087
+_bookname:测量学测绘高级理论
+_author:朱军斌
+_pages:116
+_collecttime:1999-12-06
+_version:第二版
+_major:天文地理学
+_discipline:测绘学
+_isbn:482-530-9724-57-9
+_booklanguage:英文
+_publisher:清华大学出版社
+_status:在借
+_abstract:
+_stack:一层
+_shelf:16
+_floor:3
+_bookvalue:51.89
+_bookid:100295
+_bookname:人工智能Python基础应用
+_author:尤鹏平
+_pages:369
+_collecttime:2004-07-12
+_version:第一版
+_major:工业技术
+_discipline:计算机技术
+_isbn:098-714-9473-21-3
+_booklanguage:中文
+_publisher:清华大学出版社
+_status:损坏
+_abstract:
+_stack:一层
+_shelf:1
+_floor:3
+_bookvalue:135.55
+
+TestBookClient-InsertBookRecord()
+[('300001', '1', '1', '1', '2010-09-17', '1', '1', '1', '133-314-2343-16-2', '1', '1', '1', '1', '1', '1', '2', '1')]
+insert success！
+
+TestBookClient-UpdateRecord()
+['book', 'bookid', '300000', 'bookid', '300001']
+update succes!
+
+TestBookClient-DeleteRecord()
+['book', 'bookid', '300000']
+delete success!
+
+TestBorrowClient-GetBorrowRecord()
+borrowid	userid	bookid	borrowdate	presretdate	actretdate
+10001	10000	100000	2011-06-14	2011-09-07	2011-09-12
+10002	10000	100001	2016-02-16	2016-05-13	2016-05-16
+10003	10000	100003	2008-11-04	2009-01-29	2009-02-02
+10004	10000	100011	2004-09-19	2004-12-17	2004-12-18
+10005	10000	100012	1999-01-04	1999-03-31	1999-04-04
+10006	10000	100015	2018-12-02	2019-03-01	2019-03-02
+10007	10000	100017	2014-02-11	2014-05-04	2014-05-12
+10008	10000	100018	2002-12-10	2003-02-28	2003-03-10
+10009	10000	100019	2006-09-23	2006-12-17	2006-12-22
+10010	10000	100023	2007-10-24	2008-01-18	2008-01-22
+
+TestBorrowClient-GetBorrowRecordByField()
+<Borrow.Borrow object at 0x00000234EBD8CC50>
+_borrowid:10001
+_userid:10000
+_bookid:100000
+_borrowdate:2011-06-14
+_presretdate:2011-09-07
+_actretdate:2011-09-12
+_borrowid:13638
+_userid:10555
+_bookid:106272
+_borrowdate:2011-06-14
+_presretdate:0000-00-00
+_actretdate:2011-08-13
+TestBorrowClient
+<Borrow.Borrow object at 0x00000234EBD8CC88>
+_borrowid:10001
+_userid:10000
+_bookid:100000
+_borrowdate:2011-06-14
+_presretdate:2011-09-07
+_actretdate:2011-09-12
+TestBorrowClient
+<Borrow.Borrow object at 0x00000234EBD8CCC0>
+_borrowid:10017
+_userid:10002
+_bookid:100048
+_borrowdate:2012-09-26
+_presretdate:2012-11-20
+_actretdate:2012-11-25
+
+TestBorrowClient-InsertBorrowRecord()
+[('50000', '10000', '100000', '2017-03-06', '2017-03-20', '2017-05-09')]
+insert success!
+
+TestBorrowClient-BorrowBook()
+['10000', '100001']
+在借
+
+TestBorrowClient-ReturnOvertimeRecord()
+['borrow', 'borrowid', '10001', 'status', '测试']
+_borrowid:13108
+_userid:10137
+_bookid:101328
+_borrowdate:1995-08-02
+_presretdate:0000-00-00
+_actretdate:1995-10-01
+_borrowid:13201
+_userid:10236
+_bookid:102235
+_borrowdate:1995-04-02
+_presretdate:0000-00-00
+_actretdate:1995-05-02
+_borrowid:13267
+_userid:10288
+_bookid:102853
+_borrowdate:1995-08-07
+_presretdate:0000-00-00
+_actretdate:1995-09-06
+_borrowid:13330
+_userid:10353
+_bookid:103396
+_borrowdate:1995-03-30
+_presretdate:0000-00-00
+_actretdate:1995-06-28
+_borrowid:13508
+_userid:10474
+_bookid:105056
+_borrowdate:1995-07-15
+_presretdate:0000-00-00
+_actretdate:1995-11-12
+_borrowid:13589
+_userid:10532
+_bookid:105862
+_borrowdate:1995-08-28
+_presretdate:0000-00-00
+_actretdate:1995-11-26
+_borrowid:13685
+_userid:10644
+_bookid:106727
+_borrowdate:1995-02-06
+_presretdate:0000-00-00
+_actretdate:1995-03-08
+
+TestBorrowClient-UpdateBorrowRecord()
+['borrow', 'borrowid', '10001', 'status', '测试']
+OK
+
+TestIllegalClient-InsertIllegal()
+[('30000', '100005', '10003', '10', '否', '2000-05-02', '损坏')]
+This object is existes
+
+TestIllegalClient-GetUserIllegal()
+Illegal records:
+10010	10010	100154	287.36	否	1998-07-01	损坏
+
+TestIllegalClient-BorrowToIllega()
+update user set status='超时' where userid='10137'
+update success!
+[(12075, '10137', '101328', 4, '否', '1996-01-01', '超时')]
+update user set status='超时' where userid='10236'
+update success!
+[(12075, '10236', '102235', 8, '否', '1996-01-01', '超时')]
+update user set status='超时' where userid='10288'
+update success!
+[(12075, '10288', '102853', 9, '否', '1996-01-01', '超时')]
+update user set status='超时' where userid='10353'
+update success!
+[(12075, '10353', '103396', 8, '否', '1996-01-01', '超时')]
+update user set status='超时' where userid='10474'
+update success!
+[(12075, '10474', '105056', 3, '否', '1996-01-01', '超时')]
+update user set status='超时' where userid='10532'
+update success!
+[(12075, '10532', '105862', 7, '否', '1996-01-01', '超时')]
+update user set status='超时' where userid='10644'
+update success!
+[(12075, '10644', '106727', 4, '否', '1996-01-01', '超时')]
+This object is existes
+
+TestIllegalClient-UpdateRecord()
+update success!
+['illegal', 'illegalid', '13000', 'userid', '21000']
+This object is existes
+
+TestRecommandClient-GetRecommandShow()
+bookname:C++Java分析理论
+author:杨国
+publisher:自然科学出版社
+version:第一版
+recomreason:书中例子和图表丰富,适合行业内专家阅读,内容生动有趣寓教于乐。
+statue:待定
+
+TestRecommandClient-InsertRecommandRecord()
+insert success!
+<Recommand.Recommand object at 0x0000029A87DFD828>
+This object is existes
+
+TestRecommandClient-GetRecommandRecord（）
+The recommand you found:
+10088	力学相对论分析概论	尤磊	自然科学出版社	第一版	内容考究严谨,专业领域内的经典,非常希望获取书中的知识,充满冶学精神与人文关怀。	待定
+{'userid': '10088'}
+
+TestUserTypeClient-GetUserType（）
+最多可同时借阅书籍数目：15	最多可一次性推荐书籍数目：3	一本书免费借阅期限：30
+
+TestUserTypeClient-GetUserTypeRecord
+身份：博士	同时可借最多图书数目：25	一次性最多可推荐图书数目：5	免费借阅期限：90	
+身份：教师	同时可借最多图书数目：30	一次性最多可推荐图书数目：10	免费借阅期限：120	
+身份：本科	同时可借最多图书数目：15	一次性最多可推荐图书数目：3	免费借阅期限：30	
+身份：硕士	同时可借最多图书数目：20	一次性最多可推荐图书数目：4	免费借阅期限：60	
